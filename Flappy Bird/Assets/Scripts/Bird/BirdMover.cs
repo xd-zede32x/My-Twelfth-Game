@@ -6,7 +6,7 @@ public class BirdMover : MonoBehaviour
 {
     [SerializeField] private float _flightSpeed;
     [SerializeField] private float _tapForce = 10;
-    [SerializeField] private Vector2 _startPosition;
+    [SerializeField] private Vector3 _startPosition;
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _maxRotationZ;
     [SerializeField] private float _minRotationZ;
