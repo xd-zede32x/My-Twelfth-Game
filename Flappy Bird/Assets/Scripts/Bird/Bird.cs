@@ -12,6 +12,11 @@ public class Bird : MonoBehaviour
         _mover = GetComponent<BirdMover>();
     }
 
+    public void IncreaseScore()
+    {
+        _pointsEarned++;        
+    }
+
     public void ResetPlayer()
     {
         _pointsEarned = 0;   
@@ -21,6 +26,6 @@ public class Bird : MonoBehaviour
     public void Died()
     {
         Debug.Log("Player of death");
-        Time.timeScale = 0f;
+        Time.timeScale = 0f; 
     }
 }

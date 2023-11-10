@@ -13,6 +13,15 @@ public class BirdCollisionHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _bird.Died();
+        if (collision.TryGetComponent<ScoreZone>(out ScoreZone scoreZone))
+        {
+            _bird.IncreaseScore();
+        }
+
+        else
+        {
+            _bird.Died();   
+        }
+
     }
 }
