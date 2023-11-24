@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class Bird : MonoBehaviour
 {
+    public event UnityAction GameOver;
+    public event UnityAction<int> ScoreChanged;
+
     private BirdMover _mover;
     private int _pointsEarned;
-
-    public event UnityAction GameOver;
-    public event UnityAction<int> ScoreChanged; 
 
     private void Start()
     {
